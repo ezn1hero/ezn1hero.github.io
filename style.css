@@ -4,6 +4,7 @@ body {
     font-size: 18px;
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
+    font-family: Arial, sans-serif; /* обновленный шрифт */
 }
 
 .container {
@@ -81,7 +82,7 @@ body {
 }
 
 .click-image {
-    width: 200px; /* Установите необходимую ширину */
+    width: 200px;
     cursor: pointer;
     transition: transform .1s;
 }
@@ -90,6 +91,16 @@ body {
     transform: scale(1.1);
 }
 
+/* Новый блок для монет за час */
+.hourly-coins {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
 
 .footer-btn {
     padding: 10px 20px;
