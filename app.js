@@ -9,14 +9,24 @@ let clicks = 0;
 let clickValue = 1;
 let upgradeCost = 10;
 
-let btn = document.getElementById("btn1");
 let clickCounter = document.getElementById("click-counter");
-let clickValueDisplay = document.getElementById("click-value");
+let clickValueDisplay = document.getElementById("click-value-display");
 let upgradeBtn = document.getElementById("upgrade-btn");
+let clickImage = document.getElementById("click-image");
 
-btn.addEventListener("click", function() {
+clickImage.addEventListener("click", function() {
     clicks += clickValue;
     clickCounter.innerText = `Клики: ${clicks}`;
+    // Add animation
+    let clickEffect = document.createElement('div');
+    clickEffect.className = 'click-effect';
+    clickEffect.innerText = `+${clickValue}`;
+    document.body.appendChild(clickEffect);
+    clickEffect.style.left = `${clickImage.getBoundingClientRect().left + clickImage.width / 2}px`;
+    clickEffect.style.top = `${clickImage.getBoundingClientRect().top}px`;
+    setTimeout(() => {
+        clickEffect.remove();
+    }, 1000);
 });
 
 upgradeBtn.addEventListener("click", function() {
@@ -25,13 +35,13 @@ upgradeBtn.addEventListener("click", function() {
         clickValue += 1;
         upgradeCost += 10;
         clickCounter.innerText = `Клики: ${clicks}`;
-        clickValueDisplay.innerText = clickValue;
-        upgradeBtn.innerText = `Upgrade Click Value (Cost: ${upgradeCost} clicks)`;
+        clickValueDisplay.innerText = `Значение клика: ${clickValue}`;
+        upgradeBtn.innerText = `Улучшить значение клика (Стоимость: ${upgradeCost} кликов)`;
     }
 });
 
 // Handle tab switching
-const tabButtons = document.querySelectorAll('.tab-button');
+const tabButtons = document.querySelectorAll('.tab-button, .footer-btn');
 const tabContents = document.querySelectorAll('.tab-content');
 
 tabButtons.forEach(button => {
