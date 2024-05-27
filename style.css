@@ -46,6 +46,16 @@ body {
     font-weight: bold;
 }
 
+.click-image {
+    width: 200px; /* Установите необходимую ширину */
+    cursor: pointer;
+    transition: transform .1s;
+}
+
+.click-image:active {
+    transform: scale(1.1);
+}
+
 .inner {
     display: flex;
     justify-content: center;
