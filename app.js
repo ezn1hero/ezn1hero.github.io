@@ -13,16 +13,11 @@ let clickCounter = document.getElementById("click-counter");
 btn.addEventListener("click", function(){
     clicks += 1;
     clickCounter.innerText = `Клики: ${clicks}`;
-    tg.MainButton.setText(`Клики: ${clicks}`);
-    tg.MainButton.show();
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.sendData(clicks.toString());
 });
-
-
-
 
 
 
