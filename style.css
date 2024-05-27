@@ -13,9 +13,7 @@ body {
 }
 
 .tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    display: none;
 }
 
 .tab-button {
