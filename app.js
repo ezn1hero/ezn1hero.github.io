@@ -17,7 +17,6 @@ let upgradeBtn = document.getElementById("upgrade-btn");
 btn.addEventListener("click", function() {
     clicks += clickValue;
     clickCounter.innerText = `Клики: ${clicks}`;
-    sendDataToServer();
 });
 
 upgradeBtn.addEventListener("click", function() {
@@ -28,7 +27,6 @@ upgradeBtn.addEventListener("click", function() {
         clickCounter.innerText = `Клики: ${clicks}`;
         clickValueDisplay.innerText = clickValue;
         upgradeBtn.innerText = `Upgrade Click Value (Cost: ${upgradeCost} clicks)`;
-        sendDataToServer();
     }
 });
 
@@ -58,23 +56,6 @@ tabButtons.forEach(button => {
     });
 });
 
-function sendDataToServer() {
-    fetch('https://your-server-url/update_progress', {  // Замените 'https://your-server-url' на URL вашего сервера
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            user_id: tg.initDataUnsafe.user.id,
-            clicks: clicks,
-            click_value: clickValue
-        }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-}
+Telegram.WebApp.onEvent("mainButtonClicked", function(){
+    tg.sendData(JSON.stringify({ clicks: clicks, clickValue: clickValue }));
+});
