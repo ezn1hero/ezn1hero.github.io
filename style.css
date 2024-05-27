@@ -6,10 +6,16 @@ body {
     background: var(--tg-theme-bg-color);
 }
 
+.container {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .tabs {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .tab-button {
@@ -17,74 +23,57 @@ body {
     border: none;
     background: #2cab37;
     color: #fff;
-    cursor: pointer;
+    border-radius: 20px;
     margin: 0 10px;
-    transition: background 0.3s;
+    cursor: pointer;
+    transition: background .2s linear;
 }
 
 .tab-button:hover {
-    background: #1e8e2b;
+    background: lightgreen;
 }
 
 .tab-content {
     display: none;
+    text-align: center;
 }
 
 .tab-content.active {
     display: block;
 }
 
-.container {
-    max-width: 390px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.click-counter {
-    font-size: 24px;
-    margin: 20px 0;
-    font-weight: bold;
-}
-
-.click-image {
-    width: 200px; /* Установите необходимую ширину */
+#click-image {
+    width: 200px;
     cursor: pointer;
     transition: transform .1s;
 }
 
-.click-image:active {
+#click-image:active {
     transform: scale(1.1);
 }
 
-.inner {
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 200px);
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
 }
 
-.btn {
-    display: inline-block;
+.footer-btn {
     padding: 10px 20px;
     border: none;
-    background: linear-gradient(45deg, rgb(248, 168, 24), rgb(144, 12, 63));
-    border-radius: 10px;
+    background: #2cab37;
     color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 18px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background 0.5s;
+    transition: background .2s linear;
 }
 
-.btn:hover {
-    background: linear-gradient(45deg, lightgreen, rgb(144, 12, 63));
+.footer-btn:hover {
+    background: lightgreen;
 }
 
-.usercard {
-    text-align: center;
-}
-
-.upgrade-content {
-    text-align: center;
-}
