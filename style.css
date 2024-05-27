@@ -82,6 +82,17 @@ body {
     border-top: 1px solid #ccc;
 }
 
+.click-image {
+    width: 200px; /* Установите необходимую ширину */
+    cursor: pointer;
+    transition: transform .1s;
+}
+
+.click-image:active {
+    transform: scale(1.1);
+}
+
+
 .footer-btn {
     padding: 10px 20px;
     border: none;
