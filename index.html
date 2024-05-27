@@ -7,27 +7,24 @@
     <title>Clicker</title>
 </head>
 <body>
-    <div class="tabs">
-        <button class="tab-button" data-tab="clicker">Clicker</button>
-        <button class="tab-button" data-tab="upgrade">Upgrade</button>
-    </div>
-    <div class="tab-content" id="clicker-tab">
-    <div id="click-counter">Клики: 0</div>
-    <!-- Заменяем кнопку на картинку -->
-    <img src="your_image.jpg" alt="Click Me" id="click-image" class="click-image">
-            </div>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button" data-tab="clicker-tab">Кликер</button>
+            <button class="tab-button" data-tab="upgrade-tab">Улучшение</button>
+        </div>
+        <div class="tab-content" id="clicker-tab">
+            <div id="click-counter">Клики: 0</div>
+            <img src="click-image.png" alt="Click Me" id="click-image" class="click-image">
+        </div>
+        <div class="tab-content" id="upgrade-tab">
+            <div id="click-value-display">Значение клика: 1</div>
+            <button id="upgrade-btn" class="btn">Улучшить значение клика (Стоимость: 10 кликов)</button>
         </div>
     </div>
-    <div class="tab-content" id="upgrade">
-        <div class="container">
-            <div id="upgrade-content" class="upgrade-content">
-                <p>Current click value: <span id="click-value">1</span></p>
-                <button class="btn" id="upgrade-btn">Upgrade Click Value (Cost: 10 clicks)</button>
-            </div>
-        </div>
+    <div class="footer">
+        <button class="footer-btn" data-tab="clicker-tab">Кликер</button>
+        <button class="footer-btn" data-tab="upgrade-tab">Улучшение</button>
     </div>
-    <div class="usercard" id="usercard"></div>
-
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="app.js"></script>
 </body>
