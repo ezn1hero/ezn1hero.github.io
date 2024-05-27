@@ -7,10 +7,24 @@
     <title>Clicker</title>
 </head>
 <body>
-    <div class="container">
-        <div id="click-counter" class="click-counter">Клики: 0</div>
-        <div class="inner">
-            <button class="btn" id="btn1">Click me!</button>
+    <div class="tabs">
+        <button class="tab-button" data-tab="clicker">Clicker</button>
+        <button class="tab-button" data-tab="upgrade">Upgrade</button>
+    </div>
+    <div class="tab-content" id="clicker">
+        <div class="container">
+            <div id="click-counter" class="click-counter">Клики: 0</div>
+            <div class="inner">
+                <button class="btn" id="btn1">Click me!</button>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" id="upgrade">
+        <div class="container">
+            <div id="upgrade-content" class="upgrade-content">
+                <p>Current click value: <span id="click-value">1</span></p>
+                <button class="btn" id="upgrade-btn">Upgrade Click Value (Cost: 10 clicks)</button>
+            </div>
         </div>
     </div>
     <div class="usercard" id="usercard"></div>
