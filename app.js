@@ -40,30 +40,20 @@ upgradeBtn.addEventListener("click", function() {
     }
 });
 
-// Handle tab switching
-const tabButtons = document.querySelectorAll('.tab-button, .footer-btn');
-const tabContents = document.querySelectorAll('.tab-content');
+// Новый блок для отображения монет за час
+let hourlyCoins = document.createElement('div');
+hourlyCoins.className = 'hourly-coins';
+document.body.appendChild(hourlyCoins);
 
-tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const target = button.getAttribute('data-tab');
+// Обновление монет за час каждую секунду
+setInterval(() => {
+    let coinsPerHour = clickValue * 3600;
+    hourlyCoins.innerText = `Монет в час: ${coinsPerHour}`;
+}, 1000);
 
-        tabContents.forEach(content => {
-            if (content.id === target) {
-                content.classList.add('active');
-            } else {
-                content.classList.remove('active');
-            }
-        });
-
-        tabButtons.forEach(btn => {
-            if (btn === button) {
-                btn.style.background = '#1e8e2b';
-            } else {
-                btn.style.background = '#2cab37';
-            }
-        });
-    });
+// Сделаем кликер активным при загрузке страницы
+document.addEventListener("DOMContentLoaded", function() {
+    clickImage.click();
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
