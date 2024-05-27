@@ -31,6 +31,25 @@ body {
 
 .tab-button:hover {
     background: lightgreen;
+
+.click-effect {
+    position: absolute;
+    color: gold;
+    font-size: 20px;
+    font-weight: bold;
+    animation: moveUp 1s ease-out;
+    pointer-events: none;
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+
 }
 
 .tab-content {
