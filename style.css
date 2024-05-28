@@ -82,7 +82,7 @@ body {
 }
 
 .click-image {
-    width: 200px;
+    width: 50px;
     cursor: pointer;
     transition: transform .1s;
 }
