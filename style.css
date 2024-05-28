@@ -88,7 +88,7 @@ body {
 }
 
 .click-image:active {
-    transform: scale(1.1);
+    transform: scale(0.5);
 }
 
 /* Новый блок для монет за час */
