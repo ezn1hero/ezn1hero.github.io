@@ -61,13 +61,13 @@ body {
 }
 
 #click-image {
-    width: 50px;
+    width: 10px;
     cursor: pointer;
     transition: transform .1s;
 }
 
 #click-image:active {
-    transform: scale(1.1);
+    transform: scale(0.5);
 }
 
 .footer {
@@ -82,7 +82,7 @@ body {
 }
 
 .click-image {
-    width: 50px;
+    width: 20px;
     cursor: pointer;
     transition: transform .1s;
 }
