@@ -34,9 +34,9 @@ upgradeBtn.addEventListener("click", function() {
         clicks -= upgradeCost;
         clickValue += 1;
         upgradeCost += 10;
-        clickCounter.innerText = `Клики: ${clicks}`;
-        clickValueDisplay.innerText = `Значение клика: ${clickValue}`;
-        upgradeBtn.innerText = `Улучшить значение клика (Стоимость: ${upgradeCost} кликов)`;
+        clickCounter.innerText = ` ${clicks}`;
+        clickValueDisplay.innerText = `Clicks for one tap ${clickValue}`;
+        upgradeBtn.innerText = `Pidortube : ${upgradeCost}`;
     }
 });
 
