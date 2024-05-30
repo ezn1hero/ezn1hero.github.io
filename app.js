@@ -16,7 +16,7 @@ let clickImage = document.getElementById("click-image");
 
 clickImage.addEventListener("click", function() {
     clicks += clickValue;
-    clickCounter.innerText = `Клики: ${clicks}`;
+    clickCounter.innerText = ` ${clicks}`;
     // Add animation
     let clickEffect = document.createElement('div');
     clickEffect.className = 'click-effect';
