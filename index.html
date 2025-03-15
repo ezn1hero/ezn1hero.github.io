@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I PRANKED</title>
+    <title>Картинка с звуком и кнопка заглушить</title>
     <style>
         /* Подключаем шрифт с файла */
         @font-face {
@@ -23,13 +23,13 @@
             background-color: #f0f0f0;
         }
 
-        /* Круглая картинка */
+        /* Картинка, увеличенная и с округлыми краями */
         .round-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            cursor: pointer;
+            width: 400px; /* Увеличиваем ширину картинки */
+            height: 400px; /* Увеличиваем высоту картинки */
+            border-radius: 50%; /* Округляем края */
+            object-fit: cover; /* Сохраняем пропорции и обрезаем лишнее */
+            cursor: pointer; /* Курсор при наведении */
         }
 
         /* Стили для кнопки */
@@ -58,7 +58,7 @@
     <!-- Скрытый аудиофайл -->
     <audio id="myAudio" src="wsapp.mp3"></audio>
 
-    <!-- Кнопка "Заглушить", которая переводит по ссылке -->
+    <!-- Кнопка "Заглушить", которая переводит по ссылке в новой вкладке -->
     <button class="mute-button" onclick="muteAndRedirect()">Заглушить</button>
 
     <script>
@@ -70,10 +70,7 @@
 
         // Функция для перехода по ссылке и остановки звука, но без глушения
         function muteAndRedirect() {
-            var audio = document.getElementById("myAudio");
-            audio.pause();  // Останавливает звук
-            audio.currentTime = 0;  // Сбросить время воспроизведения на начало
-            window.location.href = "https://www.example.com";  // Перевод по ссылке
+            window.open("https://t.me/renpyg", "_blank");  // Перевод по ссылке в новой вкладке
         }
     </script>
 
