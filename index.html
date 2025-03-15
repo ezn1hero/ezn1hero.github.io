@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Картинка с звуком и кнопка заглушить</title>
+    <title>I PRANKED</title>
     <style>
+        /* Подключаем шрифт с файла */
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('zanos.ttf') format('truetype'); /* Замените на путь к вашему шрифту */
+        }
+
+        body {
+            font-family: 'MyCustomFont', sans-serif; /* Используем кастомный шрифт */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
         /* Круглая картинка */
         .round-image {
             width: 200px;
@@ -13,27 +31,49 @@
             object-fit: cover;
             cursor: pointer;
         }
+
+        /* Стили для кнопки */
+        .mute-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: red; /* Красный цвет */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .mute-button:hover {
+            background-color: darkred; /* Темнее при наведении */
+        }
     </style>
 </head>
 <body>
 
-    <img src="boss.jpg" alt="Картинка" class="round-image" onclick="playSound()">
+    <!-- Картинка, при клике на которую будет воспроизводиться звук -->
+    <img src="your-image.jpg" alt="Картинка" class="round-image" onclick="playSound()">
 
-    <audio id="myAudio" src="wsapp.mp3"></audio>
+    <!-- Скрытый аудиофайл -->
+    <audio id="myAudio" src="sound.mp3"></audio>
 
-    <button onclick="muteAndRedirect()">Заглушить</button>
+    <!-- Кнопка "Заглушить", которая переводит по ссылке -->
+    <button class="mute-button" onclick="muteAndRedirect()">Заглушить</button>
 
     <script>
+        // Функция для воспроизведения звука при клике на картинку
         function playSound() {
             var audio = document.getElementById("myAudio");
             audio.play();
         }
 
+        // Функция для перехода по ссылке и остановки звука, но без глушения
         function muteAndRedirect() {
             var audio = document.getElementById("myAudio");
-            audio.pause(); 
-            audio.currentTime = 0;  
-            window.location.href = "https://www.example.com";  
+            audio.pause();  // Останавливает звук
+            audio.currentTime = 0;  // Сбросить время воспроизведения на начало
+            window.location.href = "https://www.example.com";  // Перевод по ссылке
         }
     </script>
 
