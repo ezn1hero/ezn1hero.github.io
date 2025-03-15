@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Clicker</title>
+    <title>Картинка с звуком и кнопка заглушить</title>
+    <style>
+        /* Круглая картинка */
+        .round-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="tabs">
-        </div>
-<div class="tab-content" id="clicker-tab">
-    <div id="click-counter">Клики: 0</div>
-    <!-- Заменяем кнопку на картинку -->
-    <img src="your_image.jpg" alt="Click Me" id="click-image" class="click-image">
-      </div>
-        <div class="tab-content" id="upgrade-tab">
-            <div id="click-value-display">Значение клика: 1</div>
-            <button id="upgrade-btn" class="btn">Улучшить значение клика (Стоимость: 10 кликов)</button>
-        </div>
-    </div>
-    <div class="footer">
-        <button class="footer-btn" data-tab="clicker-tab">Кликер</button>
-        <button class="footer-btn" data-tab="upgrade-tab">Улучшение</button>
-    </div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="app.js"></script>
+
+    <img src="boss.jpg" alt="Картинка" class="round-image" onclick="playSound()">
+
+    <audio id="myAudio" src="sound.mp3"></audio>
+
+    <button onclick="muteAndRedirect()">Заглушить</button>
+
+    <script>
+        function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        function muteAndRedirect() {
+            var audio = document.getElementById("myAudio");
+            audio.pause(); 
+            audio.currentTime = 0;  
+            window.location.href = "https://www.example.com";  
+        }
+    </script>
+
 </body>
 </html>
