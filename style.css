@@ -6,3 +6,8 @@
 body {
     font-family: 'MyCustomFont', sans-serif;
 }
+
+.round-image {
+    width: 300px;
+    height: 300px;
+}
