@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Картинка</title>
+    <title>YOU TROLL</title>
     <style>
-        /* Подключаем шрифт с файла */
+
         @font-face {
             font-family: 'MyCustomFont';
-            src: url('zanos.ttf') format('truetype'); /* Замените на путь к вашему шрифту */
+            src: url('zanos.ttf') format('truetype'); 
         }
 
         body {
-            font-family: 'MyCustomFont', sans-serif; /* Используем кастомный шрифт */
+            font-family: 'MyCustomFont', sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -23,54 +23,66 @@
             background-color: #f0f0f0;
         }
 
-        /* Картинка, увеличенная и с округлыми краями */
+
         .round-image {
-            width: 300px; /* Увеличиваем ширину картинки */
-            height: 300px; /* Увеличиваем высоту картинки */
-            border-radius: 50%; /* Округляем края */
-            object-fit: cover; /* Сохраняем пропорции и обрезаем лишнее */
-            cursor: pointer; /* Курсор при наведении */
+            width: 300px; 
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover; 
+            cursor: pointer; 
         }
 
-        /* Стили для кнопки */
         .mute-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: red; /* Красный цвет */
-            color: white;
+            margin-top: 30px;
+            padding: 30px 40px;
+            background-color: rgb(80, 77, 77); 
+            color: rgb(255, 255, 255);
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: 600;
         }
 
-        .mute-button:hover {
-            background-color: darkred; /* Темнее при наведении */
+        .watermark-button {
+            margin-top: 220px;
+            padding: 50px 70px;
+            background-color: rgb(80, 77, 77); 
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 45px;
+            font-weight: 900;
         }
+
+
     </style>
 </head>
 <body>
 
-    <!-- Картинка, при клике на которую будет воспроизводиться звук -->
-    <img src="slam.jpg" alt="Картинка" class="round-image" onclick="playSound()">
 
-    <!-- Скрытый аудиофайл -->
-    <audio id="myAudio" src="zanos.mp3"></audio>
+    <img src="slam.jpg" alt="Произошла ошибка" class="round-image" onclick="playSound()">
 
-    <!-- Кнопка "Заглушить", которая переводит по ссылке в новой вкладке -->
+    <audio id="myAudio" src="penis.mp3" autoplay loop ></audio>
+
     <button class="mute-button" onclick="muteAndRedirect()">Заглушить</button>
+    
+    <button class="watermark-button" onclick="watermark()">@RENPYG</button>
 
     <script>
-        // Функция для воспроизведения звука при клике на картинку
+
         function playSound() {
             var audio = document.getElementById("myAudio");
             audio.play();
         }
 
-        // Функция для перехода по ссылке и остановки звука, но без глушения
         function muteAndRedirect() {
-            window.open("https://t.me/renpyg", "_blank");  // Перевод по ссылке в новой вкладке
+            window.open("https://t.me/renpyg", "_blank");  
+        }
+
+        function watermark() {
+            window.open("https://t.me//renpyg", "_blank");
         }
     </script>
 
