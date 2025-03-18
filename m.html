@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU TROLL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('zanos.ttf') format('truetype'); 
+        }
+
+        body {
+            font-family: 'MyCustomFont', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:#222222;
+        }
+
+
+        .round-image {
+            width: 300px; 
+            height: 300px;
+
+        }
+
+        .mute-button {
+            margin-top: 30px;
+            padding: 30px 40px;
+
+        }
+
+        .watermark-button {
+            margin-top: 220px;
+            padding: 50px 70px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <img src="slam.jpg" alt="Произошла ошибка" class="round-image" onclick="playSound()">
+
+    <audio id="myAudio" src="penis.mp3" autoplay loop ></audio>
+
+    <button class="mute-button" onclick="muteAndRedirect()">Заглушить</button>
+    
+    <button class="watermark-button" onclick="watermark()">@SNDMAK</button>
+
+    <script>
+
+        function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        function muteAndRedirect() {
+            window.open("https://t.me/sndmak", "_blank");  
+        }
+
+        function watermark() {
+            window.open("https://t.me/sndmak", "_blank");
+        }
+    </script>
+
+</body>
+</html>

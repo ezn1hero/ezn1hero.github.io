@@ -3,86 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOU TROLL</title>
+    <title>Главная-SNDMAK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="style.css">
     <style>
 
-        @font-face {
-            font-family: 'MyCustomFont';
-            src: url('zanos.ttf') format('truetype'); 
-        }
+
 
         body {
             font-family: 'MyCustomFont', sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #f0f0f0;
+            background-color: #202020;
         }
-
-
+        
         .round-image {
             width: 300px; 
             height: 300px;
-            border-radius: 50%;
-            object-fit: cover; 
-            cursor: pointer; 
         }
 
-        .mute-button {
-            margin-top: 30px;
-            padding: 30px 40px;
-            background-color: rgb(80, 77, 77); 
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 22px;
-            font-weight: 600;
+        .tg-button {
+            margin-top: 50px;
+            padding: 10px 10px;
+
         }
 
-        .watermark-button {
-            margin-top: 220px;
-            padding: 50px 70px;
-            background-color: rgb(80, 77, 77); 
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            font-size: 45px;
-            font-weight: 900;
-        }
+
 
 
     </style>
 </head>
 <body>
-
-
-    <img src="slam.jpg" alt="Произошла ошибка" class="round-image" onclick="playSound()">
-
-    <audio id="myAudio" src="penis.mp3" autoplay loop ></audio>
-
-    <button class="mute-button" onclick="muteAndRedirect()">Заглушить</button>
     
-    <button class="watermark-button" onclick="watermark()">@RENPYG</button>
+    <h1 class="site-title fade-in">ОФИЦАЛЬНЫЙ САЙТ SNDMAK©</h1>
+    <img src="slam.jpg" class="round-image fade-in">
+    <button class="tg-button fade-in"  onclick="Telegram()">Наш Telegram канал</button>
+    <p class="site-down fade-in">У нас нет других сайтов и соцсетей. Остерегайтесь мошенников.</p>
+
+    
+
 
     <script>
-
-        function playSound() {
-            var audio = document.getElementById("myAudio");
-            audio.play();
-        }
-
-        function muteAndRedirect() {
-            window.open("https://t.me/renpyg", "_blank");  
-        }
-
-        function watermark() {
-            window.open("https://t.me//renpyg", "_blank");
+        function Telegram() {
+            window.open("https://t.me/sndmak", "_blank");  
         }
     </script>
 
