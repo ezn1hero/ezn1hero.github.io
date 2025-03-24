@@ -29,6 +29,7 @@
             height: 300px;
         }
 
+
         .tg-button {
             margin-top: 50px;
             padding: 10px 10px;
@@ -43,7 +44,8 @@
 <body>
     
     <h1 class="site-title fade-in">ОФИЦАЛЬНЫЙ САЙТ SNDMAK©</h1>
-    <img src="slam.jpg" class="round-image fade-in">
+    <img src="slam.jpg" class="round-image fade-in"  onclick="playSound()">
+    <audio id="myAudio" src="site.mp3"></audio>
     <button class="tg-button fade-in"  onclick="Telegram()">Наш Telegram канал</button>
     <p class="site-down fade-in">У нас нет других сайтов и соцсетей. Остерегайтесь мошенников.</p>
 
@@ -51,6 +53,12 @@
 
 
     <script>
+
+function playSound() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
         function Telegram() {
             window.open("https://t.me/sndmak", "_blank");  
         }
