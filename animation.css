@@ -4,15 +4,15 @@
     font-weight: smooth;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 20px; 
+    margin-bottom: 10px;
     animation-delay: 0.3s; 
 }
 
 .site-down {
-    font-weight: smooth;
+    font-weight: normal;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 20px; 
+    margin-bottom: 60px;
     animation-delay: 0.3s;
 }
 
